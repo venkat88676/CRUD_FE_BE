@@ -28,7 +28,7 @@ userRouter.post('/login',async(req,res)=>{
             })
         } 
         else{
-            res.send("Register First")
+            res.send({"msg":"Register First"})
         }
     }catch(err){
         res.status(400).send({msg:err.message})
