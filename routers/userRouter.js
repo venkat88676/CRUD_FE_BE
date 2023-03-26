@@ -5,10 +5,6 @@ const jwt=require("jsonwebtoken")
 const {UserModel}=require('../model/usermodel')
 const userRouter=express.Router();
 
-
-const {authenticate}=require("../middleware/authenticate")
-
-
 userRouter.get('/',async(req,res)=>{
     try{
         const users= await UserModel.find()
